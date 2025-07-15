@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- App Groups (if needed for extensions) -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.rompfamilyenterprises.chordispeak</string>
+	</array>
+	
+	<!-- iCloud -->
+	<key>com.apple.developer.icloud-container-identifiers</key>
+	<array>
+		<string>iCloud.rompfamilyenterprises.chordispeak</string>
+	</array>
+	
+	<key>com.apple.developer.icloud-services</key>
+	<array>
+		<string>CloudDocuments</string>
+	</array>
+	
+	<!-- Associated Domains -->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:chordispeak-130612573310.us-east4.run.app</string>
+	</array>
+	
+	<!-- Network -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+	
+	<!-- File Access -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	
+	<!-- Audio -->
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+</dict>
+</plist>

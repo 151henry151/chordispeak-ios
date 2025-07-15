@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject private var viewModel = ChordiSpeakViewModel()
     @State private var showingFilePicker = false
     @State private var showingResults = false
+    @State private var showingSettings = false
     
     var body: some View {
         NavigationView {
@@ -47,6 +48,14 @@ struct ContentView: View {
             .navigationTitle("ChordiSpeak")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        showingSettings = true
+                    }) {
+                        Image(systemName: "gear")
+                    }
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if viewModel.isProcessing {
                         Button("Cancel") {
@@ -66,6 +75,9 @@ struct ContentView: View {
                 selectedURL: $viewModel.selectedFileURL,
                 selectedFileName: $viewModel.selectedFileName
             )
+        }
+        .sheet(isPresented: $showingSettings) {
+            SettingsView()
         }
     }
     
